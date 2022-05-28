@@ -12,9 +12,27 @@ def sort(array):
         return array
 
     # 配列の先頭を基準値とする
+    if len(array)==0:
+      return array
+    
     pivot = array[0]
 
     # ここから記述
+    left=[]
+    right=[]
+    middle=[]
+    for i in range(len(array)):
+      if array[i]<pivot:
+        left.append(array[i])
+      elif array[i]>pivot:
+        right.append(array[i])
+      else:
+        middle.append(array[i])
+        
+    left=sort(left)
+    right=sort(right)
+    
+    return left+middle+right
 
 
     # ここまで記述
