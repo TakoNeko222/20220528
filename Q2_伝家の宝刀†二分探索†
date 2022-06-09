@@ -20,7 +20,7 @@ def serch_index(sorted_array, target_number):
       elif sorted_array[middle]<target_number:
         left=middle+1
       elif sorted_array[middle]>target_number:
-        right=mid
+        right=middle
     # ここまで記述
 
     # 探索対象が存在しない場合、-1を返却
